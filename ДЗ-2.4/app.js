@@ -32,35 +32,28 @@ titleProject = getTitle();
 console.log('Название проекта — ', titleProject);
 
 
-let allServicePrices;
-
 let getAllServicePrices = function() {
-    allServicePrices = servicePrice1 + servicePrice2;
-    console.log('Стоимость всех услуг — ', allServicePrices);
+    return servicePrice1 + servicePrice2;    
 };
 
-getAllServicePrices();
+let allServicePrices = getAllServicePrices();
+console.log('Стоимость всех услуг — ', allServicePrices);
 
-
-let fullPrice; 
 
 function getFullPrice() {
-    fullPrice = allServicePrices + screenPrice;
-    console.log('Стоимость всех услуг с вёрсткой — ', fullPrice);
+    return allServicePrices + screenPrice;    
 };
 
-getFullPrice();
+let fullPrice = getFullPrice();
+console.log('Стоимость всех услуг с вёрсткой — ', fullPrice);
 
-
-let servicePercentPrice;
 
 let getServicePercentPrices = function() {
-    servicePercentPrice = Math.round(fullPrice - ((fullPrice/100)*percentage));
-    console.log('Итоговая стоимость за вычетом процента подрядчику — ', servicePercentPrice);
+    return Math.round(fullPrice - ((fullPrice/100)*percentage));    
 }
 
-getServicePercentPrices();
-
+let servicePercentPrice = getServicePercentPrices();
+console.log('Итоговая стоимость за вычетом процента подрядчику — ', servicePercentPrice);
 
 
 let getRollbackMessage = function() {
